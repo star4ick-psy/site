@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дарья Старостина — детский и подростковый психолог</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#ff8fb1; --mint:#7ee0c4; --blue:#8ec5ff; --yellow:#ffe27a;
+  --purple:#b79cff; --dark:#3a3a5a; --bg:#fff6fb;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito',sans-serif;color:var(--dark);background:var(--bg);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3{font-family:'Baloo 2',cursive;line-height:1.2;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.btn{display:inline-block;background:var(--pink);color:#fff;padding:14px 34px;border-radius:40px;font-family:'Baloo 2';font-weight:700;font-size:18px;box-shadow:0 8px 20px rgba(255,143,177,.4);transition:.3s;cursor:pointer;border:none;}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(255,143,177,.55);}
+/* NAV */
+header{position:sticky;top:0;background:rgba(255,246,251,.9);backdrop-filter:blur(8px);z-index:100;padding:12px 0;}
+nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.logo{font-family:'Baloo 2';font-weight:800;font-size:24px;color:var(--purple);}
+.logo span{color:var(--pink);}
+.menu{display:flex;gap:22px;flex-wrap:wrap;}
+.menu a{font-weight:700;transition:.2s;}
+.menu a:hover{color:var(--pink);}
+/* HERO */
+.hero{padding:70px 0 90px;text-align:center;position:relative;}
+.hero h1{font-size:52px;color:var(--purple);}
+.hero .sub{font-size:22px;margin:18px 0 10px;font-weight:700;color:var(--pink);}
+.hero p{max-width:620px;margin:14px auto 30px;font-size:18px;}
+.bubbles{font-size:60px;margin:20px 0;}
+.bubbles span{display:inline-block;margin:0 8px;animation:float 3s ease-in-out infinite;}
+.bubbles span:nth-child(2){animation-delay:.4s;}
+.bubbles span:nth-child(3){animation-delay:.8s;}
+.bubbles span:nth-child(4){animation-delay:1.2s;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-15px);}}
+/* SECTION */
+section{padding:70px 0;}
+.section-title{text-align:center;font-size:40px;margin-bottom:14px;color:var(--purple);}
+.section-desc{text-align:center;max-width:640px;margin:0 auto 46px;font-size:18px;}
+/* ABOUT */
+.about-card{background:#fff;border-radius:30px;padding:40px;box-shadow:0 14px 40px rgba(183,156,255,.18);display:flex;gap:36px;align-items:center;flex-wrap:wrap;}
+.avatar{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--blue));display:flex;align-items:center;justify-content:center;font-size:90px;box-shadow:0 10px 30px rgba(142,197,255,.4);margin:0 auto;}
+.about-text{flex:1;min-width:260px;}
+.about-text h3{font-size:28px;color:var(--pink);}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.tag{background:var(--yellow);padding:6px 16px;border-radius:20px;font-weight:700;font-size:14px;}
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;}
+.card{background:#fff;border-radius:26px;padding:32px 26px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:.3s;border:3px solid transparent;}
+.card:hover{transform:translateY(-8px);border-color:var(--pink);}
+.card .ic{font-size:56px;margin-bottom:14px;}
+.card h3{font-size:22px;margin-bottom:8px;}
+/* TEAM SPORT */
+.sport{background:linear-gradient(135deg,var(--blue),var(--mint));color:#fff;border-radius:40px;padding:56px 40px;text-align:center;}
+.sport h2{font-size:40px;color:#fff;}
+.sport p{max-width:680px;margin:18px auto;font-size:18px;}
+.sport-list{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:26px;}
+.sport-item{background:rgba(255,255,255,.22);border-radius:20px;padding:18px 24px;font-weight:700;backdrop-filter:blur(4px);}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+.step{background:#fff;border-radius:24px;padding:28px;text-align:center;box-shadow:0 8px 26px rgba(0,0,0,.05);}
+.step .num{width:50px;height:50px;margin:0 auto 12px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Baloo 2';font-size:22px;font-weight:800;}
+/* FORM */
+.form-block{background:linear-gradient(135deg,var(--pink),var(--purple));border-radius:40px;padding:56px 40px;color:#fff;text-align:center;}
+.form-block h2{color:#fff;font-size:38px;}
+.discount{background:var(--yellow);color:var(--dark);display:inline-block;padding:8px 24px;border-radius:30px;font-family:'Baloo 2';font-weight:800;margin:16px 0 26px;font-size:20px;}
+form{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+form input,form textarea{padding:15px 20px;border-radius:18px;border:none;font-family:'Nunito';font-size:16px;}
+form textarea{resize:vertical;min-height:90px;}
+form .btn{background:var(--yellow);color:var(--dark);margin-top:6px;}
+/* CONTACTS */
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+.contact-card{background:#fff;border-radius:24px;padding:30px;text-align:center;box-shadow:0 8px 26px rgba(0,0,0,.06);}
+.contact-card .ic{font-size:44px;margin-bottom:10px;}
+.contact-card a{color:var(--purple);font-weight:700;font-size:20px;}
+footer{text-align:center;padding:40px 20px;color:#9a9ab0;font-weight:600;}
+.consent{max-width:520px;margin:0 auto 22px;text-align:left;}
+.consent label{display:flex;gap:10px;align-items:flex-start;font-size:15px;cursor:pointer;}
+.consent input{margin-top:5px;width:18px;height:18px;flex:0 0 auto;cursor:pointer;}
+.messengers{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.msg-btn{padding:14px 28px;border-radius:14px;font-family:'Baloo 2';font-weight:700;font-size:17px;color:#fff;opacity:.45;pointer-events:none;transition:.25s;box-shadow:0 8px 20px rgba(0,0,0,.15);}
+.msg-btn.tg{background:#2aabee;}
+.msg-btn.wa{background:#25d366;}
+.msg-btn.mx{background:#4b7bff;}
+.msg-btn[data-active="1"]{opacity:1;pointer-events:auto;}
+.msg-btn[data-active="1"]:hover{transform:translateY(-3px);}
+@media(max-width:600px){
+  .hero h1{font-size:36px;}
+  .section-title{font-size:30px;}
+  .menu{display:none;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Дарья <span>Старостина</span></div>
+      <div class="menu">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Направления</a>
+        <a href="#sport">Спорт</a>
+        <a href="#steps">Как проходит</a>
+        <a href="#form">Скидка</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>Психолог для детей и подростков</h1>
+    <div class="sub">Старостина Дарья Сергеевна</div>
+    <div class="bubbles"><span>🌈</span><span>🧸</span><span>⚽</span><span>🚀</span></div>
+    <p>Помогаю ребятам от 6 лет находить общий язык с собой, родителями и миром вокруг. Работаю очно в Москве и онлайн — из любой точки планеты 🌍</p>
+    <a href="#form" class="btn">Записаться на консультацию</a>
+  </div>
+</section>
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">Приятно познакомиться!</h2>
+    <div class="about-card">
+      <div class="avatar" style="width:100%;height:100%;"><img src="hero.png"></div>
+      <div class="about-text">
+        <h3>Дарья Сергеевна</h3>
+        <p>Детский и подростковый психолог. Создаю тёплое и безопасное пространство, где ребёнок может быть собой. Вместе мы разбираемся с тревогами, отношениями и большими целями — легко, бережно и с интересом.</p>
+        <div class="tags">
+          <span class="tag">Дети от 6 лет</span>
+          <span class="tag">Подростки</span>
+          <span class="tag">Очно · Москва</span>
+          <span class="tag">Онлайн · весь мир</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">С чем я помогаю</h2>
+    <p class="section-desc">Каждый запрос — уникален. Подбираю подход именно под твоего ребёнка.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">👨‍👩‍👧</div><h3>Детско-родительские отношения</h3><p>Учимся понимать друг друга и уменьшать конфликты в семье.</p></div>
+      <div class="card"><div class="ic">🏆</div><h3>Результаты в спорте</h3><p>Работа с волнением, мотивацией и настроем на победу.</p></div>
+      <div class="card"><div class="ic">🧭</div><h3>Профориентация</h3><p>Помогаю подростку понять себя и выбрать путь по душе.</p></div>
+      <div class="card"><div class="ic">🧩</div><h3>Психологическая диагностика</h3><p>Профессиональная оценка особенностей и сильных сторон.</p></div>
+      <div class="card"><div class="ic">😌</div><h3>Тревога и стресс</h3><p>Учимся справляться с переживаниями и обретать спокойствие.</p></div>
+      <div class="card"><div class="ic">💬</div><h3>Коммуникативные навыки</h3><p>Учимся уверенно общаться, заводить друзей и говорить «нет».</p></div>
+      <div class="card"><div class="ic">🤝</div><h3>Самооценка и уверенность</h3><p>Поддержка в дружбе, самооценке и адаптации в коллективе.</p></div>
+      <div class="card"><div class="ic">😉</div><h3>Эмоциональный интеллект</h3><p>Учимся распознавать, выражать и отпускать свои и чужие эмоции.</p></div>
+    </div>
+  </div>
+</section>
+<section id="sport">
+  <div class="container">
+    <div class="sport">
+      <h2>⚽ Работа со спортивными командами</h2>
+      <p>Отдельное направление для юных спортсменов и целых команд! Помогаю ребятам показывать лучший результат, сохранять командный дух и не сгорать под давлением соревнований.</p>
+      <div class="sport-list">
+        <div class="sport-item">🎯 Настрой на соревнования</div>
+        <div class="sport-item">🤜 Командное сплочение</div>
+        <div class="sport-item">🔥 Мотивация и цели</div>
+        <div class="sport-item">🧘 Работа с волнением</div>
+        <div class="sport-item">🏋 Отношения тренер–спортсмен</div>
+      </div>
+      <div style="margin-top:30px;"><a href="#form" class="btn" style="background:#fff;color:var(--purple);">Обсудить работу с командой</a></div>
+    </div>
+  </div>
+</section>
+<section id="steps">
+  <div class="container">
+    <h2 class="section-title">Как проходит работа</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Знакомство</h3><p>Обсуждаем запрос и договариваемся о встрече.</p></div>
+      <div class="step"><div class="num">2</div><h3>Первая встреча</h3><p>Создаём контакт и разбираемся в ситуации.</p></div>
+      <div class="step"><div class="num">3</div><h3>Работа</h3><p>Идём к цели через игры, беседы и практики.</p></div>
+      <div class="step"><div class="num">4</div><h3>Результат</h3><p>Замечаем изменения и радуемся успехам 🎉</p></div>
+    </div>
+  </div>
+</section>
+<section id="form">
+  <div class="container">
+    <div class="form-block">
+      <h2>Оставьте заявку</h2>
+      <div class="discount">🎁 Скидка на первую консультацию!</div>
+      <p>Напишите мне в удобный мессенджер — отвечу и расскажу подробности.</p>
+      <div class="consent">
+        <label>
+          <input type="checkbox" id="agree" onchange="toggleBtns()">
+          <span>Я даю согласие на обработку персональных данных и принимаю
+          <a href="#privacy" style="color:#fff;text-decoration:underline;">политику конфиденциальности</a>.</span>
+        </label>
+      </div>
+      <div class="messengers" id="msgBtns">
+        <a class="msg-btn tg" href="https://t.me/+79152321510" target="_blank" data-active="0">✈️ Telegram</a>
+        <a class="msg-btn wa" href="https://wa.me/79152321510" target="_blank" data-active="0">🟢 WhatsApp</a>
+        <a class="msg-btn mx" href="https://max.ru/+79152321510" target="_blank" data-active="0">🔵 Max</a>
+      </div>
+    </div>
+  </div>
+</section>
+      <p id="msg" style="margin-top:16px;font-weight:700;"></p>
+    </div>
+  </div>
+</section>
+<section id="contacts">
+  <div class="container">
+    <h2 class="section-title">Контакты</h2>
+    <div class="contacts">
+      <div class="contact-card">
+        <div class="ic">📞</div><h3>Телефон</h3>
+        <a href="tel:+79152321510">+7 915 232-15-10</a>
+      </div>
+      <div class="contact-card">
+        <div class="ic">✈️</div><h3>Telegram</h3>
+        <a href="https://t.me/daria_psy" target="_blank">@daria_psy</a>
+      </div>
+      <div class="contact-card">
+        <div class="ic">📍</div><h3>Адрес</h3>
+        <a>г. Москва, м. Сокольники/ Преображенская площадь</a>
+        <p>+ онлайн по всему миру</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="privacy" style="padding:40px 0;">
+  <div class="container">
+    <div style="background:var(--card);border-radius:20px;padding:34px;box-shadow:0 8px 26px rgba(0,0,0,.05);font-size:15px;color:#555;">
+      <h3 style="color:var(--indigo);margin-bottom:12px;">Согласие на обработку персональных данных</h3>
+      <p>Нажимая кнопку перехода в мессенджер и отправляя сообщение, вы даёте согласие ИП Старостиной Дарье Сергеевне на обработку ваших персональных данных (имя, номер телефона, содержание обращения) в соответствии с Федеральным законом №152-ФЗ «О персональных данных». Данные используются исключительно для связи с вами, консультирования и записи на приём и не передаются третьим лицам. Вы вправе отозвать согласие в любой момент, написав в любой из указанных мессенджеров.</p>
+    </div>
+  </div>
+</section><footer>
+  © 2024-2026 ИП Старостина Дарья Сергеевна · Детский и подростковый психолог
+</footer>
+<script>
+function thanks(e){
+  e.preventDefault();
+  document.getElementById('msg').textContent='Спасибо! Заявка отправлена 💛 Скоро свяжемся!';
+  e.target.reset();
+}
+</script>
+<script>
+function toggleBtns(){
+  var on = document.getElementById('agree').checked ? '1' : '0';
+  document.querySelectorAll('.msg-btn').forEach(function(b){
+    b.setAttribute('data-active', on);
+  });
+}
+</script>
+</body>
+</html>
+
+
