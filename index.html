@@ -59,6 +59,22 @@ footer{padding:38px 0;border-top:1px solid var(--line);font-size:.82rem;color:va
 #requests .section-head{margin-bottom:20px}
 #requests .card{padding:18px}
 }
+
+/* Each desktop section occupies at least the space below the navigation. */
+main > section{scroll-margin-top:77px}
+@media(min-width:921px){
+main > section:not(.hero){
+min-height:calc(100vh - 77px);
+min-height:calc(100svh - 77px);
+display:flex;
+align-items:center;
+padding-block:clamp(24px,4svh,48px);
+}
+main > section:not(.hero) > .container{flex-shrink:0}
+main > section:not(.hero) .section-head{margin-bottom:24px}
+#requests{padding-block:clamp(24px,4svh,48px)}
+#requests .cards{grid-auto-rows:1fr}
+}
 </style>
 </head>
 <body>
