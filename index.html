@@ -160,7 +160,11 @@ main > section:not(.hero),#requests{padding-block:20px}
 .professional-memberships .membership-since{font-size:.875rem;color:var(--muted);margin-bottom:8px}
 .professional-memberships h3{margin-bottom:0}
 @media(max-width:920px){.professional-grid{grid-template-columns:1fr;gap:16px}}
-.file-field{grid-column:1 / -1}.file-field input{font-size:.875rem}.file-field input::file-selector-button{border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-right:10px;background:var(--soft);color:var(--navy);font:inherit;cursor:pointer}#attachment-status{overflow-wrap:anywhere}</style>
+.file-field{grid-column:1 / -1}.file-field input{font-size:.875rem}.file-field input::file-selector-button{border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-right:10px;background:var(--soft);color:var(--navy);font:inherit;cursor:pointer}#attachment-status{overflow-wrap:anywhere}
+/* Tighter portrait framing in the formats and pricing section. */
+#prices .photo-feature img{aspect-ratio:4 / 5;height:auto;min-height:0;max-height:none;object-fit:cover;object-position:center 65%}
+@media(min-width:921px){#prices .photo-feature img{height:170px;aspect-ratio:auto;object-position:center 60%}}
+</style>
 </head>
 <body>
 <header><div class="container"><nav><a class="brand" href="#top"><span class="brand-mark">DS</span><span>Дарья Старостина</span></a><div class="menu"><a href="#requests">С чем работаю</a><a href="#teams">Командам</a><a href="#about">Обо мне</a><a href="#prices">Стоимость</a><a href="#faq">FAQ</a><a href="#contact">Записаться</a></div></nav></div></header>
